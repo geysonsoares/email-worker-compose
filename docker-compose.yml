@@ -43,6 +43,8 @@ services:
       - fila
     depends_on:
       - db
+    environment: 
+      - DB_NAME=email_sender
   worker:
     build: worker
     volumes:
