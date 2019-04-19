@@ -44,12 +44,12 @@ services:
     depends_on:
       - db
   worker:
-    image: python:3.6
+    build: worker
     volumes:
       # Worker
       - ./worker:/worker
     working_dir: /worker
-    command: bash ./app.sh
+    command: worker.py
     networks: 
       - fila
     depends_on: 
