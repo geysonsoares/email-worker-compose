@@ -44,7 +44,7 @@ services:
     depends_on:
       - db
     environment: 
-      - DB_NAME=email_sender
+      - DB_NAME=wrong_email_sender
   worker:
     build: worker
     volumes:
